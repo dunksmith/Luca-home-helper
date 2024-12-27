@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Smith home helper </title>
+
+  <style>
+  
+  body {
+    text-align:center;
+    background-color: blue;
+    font-size: 30px;
+}
+   input {
+  font-size:30px;
+}
+
+p {
+color:white;
+}
+  </style>
+</head>
+<body style="">
+
+  <p> Smith home helper</p> 
+
+
+  <p>
+    <form id="form">
+      <input type="text" id="password" name="password" placeholder="enter password"/>
+    </form>
+  </p> 
+
+
+  <p>
+    <img src="PADLOCK.PNG" width="400px"/>
+</p> 
+
+<script>
+
+var form = document.getElementById("form")
+form.addEventListener("submit", function(evt) {
+
+  evt.preventDefault();
+  var form = evt.target;
+  var password = form.elements["password"].value;
+  
+  if (password=="oldchild")
+    window.location.href = "select-section-pg.html";
+  else
+    alert("incorrect details try again")
+
+})
+
+</script>
+
+</body>
+</html> 
